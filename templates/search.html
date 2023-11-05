@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="bg-gray-800 min-h-screen">
+        <div class="max-w-screen-xl mx-auto p-4">
+            <p class="text-xl text-white">Click on any news to get summary and translation option.</p>
+            <div class="container">
+            {% for art in articles %}
+                    <div class="cards">
+                        <div class="card-item">
+                          <div class="card-image"><img src='{{ art['urlToImage'] }}'/></div>
+                          <div class="card-info">
+                            <!-- <h2 class="card-title">Meditation</h2> -->
+                            <p class="card-intro font-serif text-white">{{ art['title'] }}</p>
+                            <a href="/article?art={{ art['url'] }}" class="btn btn-info">Read</a>
+                          </div>
+                        </div>
+                      </div>
+            {% endfor %}
+                  </div>
+
+              <!-- cards finish -->
+        </div>
+    </div>
+
+{% endblock content %}

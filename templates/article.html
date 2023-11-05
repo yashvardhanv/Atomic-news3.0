@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="bg-gray-800 min-h-screen">
+        <div class="max-w-screen-xl mx-auto p-4">
+            <p class="text-l text-white">Summerized news.</p>
+            <img src="{{ url_for('static', filename='translation.png') }}" class='inline' height="40vw" width='40vw'alt="">
+            <p class="text-l text-white inline">Translate News to <a href='/translated?url={{ article.url }}'>Hindi</a></p>
+            <h1 class="text-3xl text-white">{{article.title}}</h1><br>
+            <img src="{{article.top_image}}">
+         <br>
+            <p class="text-l text-white">{{ article.summary }}</p>
+            <br><br>
+            <p class="text-l text-white">For full article <a href='{{ article.url }}'>click here</a></p>
+
+
+        </div></div>
+
+{% endblock content %}

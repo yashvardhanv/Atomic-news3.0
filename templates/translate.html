@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="bg-gray-800 min-h-screen">
+        <div class="max-w-screen-xl mx-auto p-4">
+            <p class="text-l text-white">Summerized News.</p>
+            <h1 class="text-3xl text-white">{{article[0]}}</h1><br>
+            <img src="{{article[2]}}">
+         <br>
+            <p class="text-l text-white">{{ article[1] }}</p>
+            <br><br>
+            <p class="text-l text-white">For full article <a href='{{ article.url }}'>click here</a></p>
+
+
+        </div></div>
+
+{% endblock content %}
